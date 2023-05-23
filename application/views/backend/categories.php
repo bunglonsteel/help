@@ -85,9 +85,9 @@
     </div>
 </div>
 
-<script async src="<?= base_url() ?>public/assets/vendor/libs/sweetalert/sweetalert2.js"></script>
-<script src="<?= base_url() ?>public/assets/vendor/libs/datatables/dataTables.min.js"></script>
-<script src="<?= base_url() ?>public/assets/vendor/libs/select2/select2.min.js"></script>
+<script async src="<?= base_url() ?>public/assets/vendor/js/sweetalert/sweetalert2.js"></script>
+<script src="<?= base_url() ?>public/assets/vendor/js/datatables/dataTables.min.js"></script>
+<script src="<?= base_url() ?>public/assets/vendor/js/select2/select2.min.js"></script>
 
 <script>
     $(function() {

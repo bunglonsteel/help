@@ -23,7 +23,7 @@
             <div class="col-12">
                 <div class="card p-md-3">
                     <div class="card-body">
-                        <form id="edit" action="<?= base_url('admin/posts/edit/'. $post->slug) ?>" method="POST" class="row g-2 g-lg-3">
+                        <form id="edit" action="<?= base_url('admin/posts/edit/' . $post->slug) ?>" method="POST" class="row g-2 g-lg-3">
                             <div class="col-md-7 col-lg-9">
                                 <label class="form-label">Judul <span class="text-danger">*</span></label>
                                 <input type="text" name="title" class="form-control" placeholder="Ketikan judul" value="<?= $post->title; ?>">
@@ -69,13 +69,12 @@
 </div>
 
 
-<script async src="<?= base_url() ?>public/assets/vendor/libs/sweetalert/sweetalert2.js"></script>
-<script src="<?= base_url() ?>public/assets/vendor/libs/select2/select2.min.js"></script>
-<script src="<?= base_url() ?>public/assets/vendor/libs/summernote/summernote-lite.js"></script>
+<script async src="<?= base_url() ?>public/assets/vendor/js/sweetalert/sweetalert2.js"></script>
+<script src="<?= base_url() ?>public/assets/vendor/js/select2/select2.min.js"></script>
+<script src="<?= base_url() ?>public/assets/vendor/js/summernote/summernote-lite.js"></script>
 
 <script>
-    
-    $(function () {
+    $(function() {
         $('#summernote').summernote({
             placeholder: 'Ketikan catatan disini..',
             codeviewIframeFilter: true,
@@ -89,8 +88,8 @@
                 ['font', ['bold', 'underline', 'color']],
                 ['para', ['ul', 'ol', 'paragraph']],
                 ['table', ['table']],
-                ['insert', ['picture','link']],
-                ['view', ['fullscreen','codeview','help']]
+                ['insert', ['picture', 'link']],
+                ['view', ['fullscreen', 'codeview', 'help']]
             ],
             callbacks: {
                 onImageUpload: function(files) {
@@ -108,11 +107,11 @@
             $('#csrf').attr('value', csrf.attr('content'))
         })
 
-        $('input[name="title"]').on('input', function(e){
-            const pattern    = /[^a-zA-Z0-9]\s*$/g
-            this.value       = this.value.replace(pattern, ' ')
-            let   temp       = this.value.trim()
-            let   result     = temp.replaceAll(/ +/g, '-').toLowerCase()
+        $('input[name="title"]').on('input', function(e) {
+            const pattern = /[^a-zA-Z0-9]\s*$/g
+            this.value = this.value.replace(pattern, ' ')
+            let temp = this.value.trim()
+            let result = temp.replaceAll(/ +/g, '-').toLowerCase()
 
             $('input[name="slug"]').val(result)
             $('#slug').html(result)
@@ -134,7 +133,7 @@
                 cache: false,
                 processData: false,
                 data: data,
-                dataType : 'JSON',
+                dataType: 'JSON',
                 success: function(res) {
                     if (res.error) {
                         show_toast('Mohon Maaf', res.message)
@@ -144,7 +143,7 @@
                         $('#summernote').summernote('insertImage', res.data);
                     }
                     $('#csrf').val(res.csrf_hash)
-                    csrf.attr('content',res.csrf_hash)
+                    csrf.attr('content', res.csrf_hash)
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     console.error(textStatus + " " + errorThrown);
@@ -157,20 +156,21 @@
                 method: 'POST',
                 url: '<?= base_url('admin/posts/delete_image_summernote') ?>',
                 cache: false,
-                dataType : "JSON",
-                data: { src:src, csrf_token:csrf.attr('content')},
+                dataType: "JSON",
+                data: {
+                    src: src,
+                    csrf_token: csrf.attr('content')
+                },
                 success: function(res) {
                     if (res.success) {
                         show_toast('Berhasil', res.message)
                     }
                     $('#csrf').val(res.csrf_hash)
-                    csrf.attr('content',res.csrf_hash)
+                    csrf.attr('content', res.csrf_hash)
                 }
             });
         };
 
         ajaxSelect('#category', '<?= base_url('admin/categories/select_categories') ?>', false)
     });
-
-    
 </script>
