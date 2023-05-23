@@ -85,6 +85,11 @@ article.notes ol li {
   @apply list-inside list-decimal marker:font-bold marker:text-teal-600;
 }
 
+article.notes ol li,
+article.notes ul li{
+    @apply mb-2;
+}
+
 #list-categories li.active {
   margin-left: 0;
 }

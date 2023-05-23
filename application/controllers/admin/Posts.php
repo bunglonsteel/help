@@ -71,10 +71,7 @@ class Posts extends CI_Controller
         } else {
             $title    = htmlentities($this->input->post('title', TRUE));
 
-            $slug     = htmlentities($this->input->post('slug', TRUE));
-            $slug     = preg_replace('/[^\-\sa-zA-Z0-9]+/', '', mb_strtolower($slug));
-            $slug     = preg_replace('/[\-\s]+/', '-', $slug);
-            $slug     = preg_replace('/(-(?!.*-)[^\/]*)/', '', $slug);
+            $slug     = url_title(htmlentities($this->input->post('slug', TRUE)));
 
             $category = htmlentities($this->input->post('category', TRUE));
             $desc     = htmlentities($this->input->post('desc', TRUE));
@@ -127,10 +124,7 @@ class Posts extends CI_Controller
         } else {
             $title    = htmlentities($this->input->post('title', TRUE));
 
-            $slug     = htmlentities($this->input->post('slug', TRUE));
-            $slug     = preg_replace('/[^\-\sa-zA-Z0-9]+/', '', mb_strtolower($slug));
-            $slug     = preg_replace('/[\-\s]+/', '-', $slug);
-            $slug     = preg_replace('/(-(?!.*-)[^\/]*)/', '', $slug);
+            $slug     = url_title(htmlentities($this->input->post('slug', TRUE)));
 
             $category = htmlentities($this->input->post('category', TRUE));
             $desc     = htmlentities($this->input->post('desc', TRUE));

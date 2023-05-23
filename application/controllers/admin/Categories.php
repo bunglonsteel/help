@@ -27,8 +27,8 @@ class Categories extends CI_Controller
             foreach ($result as $res) {
                 $row        = [];
                 $row[]      = ++$start . ".";
-                $row[]      = '<span class="d-block fw-bold">' . htmlspecialchars($res->category) . '</span><small><i>' . implode(' ->  ', $this->_displayCategories($result, $res->parent_id)) . '</i></small>';
-                $row[]      = htmlspecialchars($res->category_slug);
+                $row[]      = '<span class="d-block fw-bold">' . htmlentities($res->category) . '</span><small><i>' . implode(' ->  ', $this->_displayCategories($result, $res->parent_id)) . '</i></small>';
+                $row[]      = htmlentities($res->category_slug);
                 $row[]      = '<div class="d-flex">
                                 <button type="button" class="d-flex btn edit btn-sm btn-secondary me-2" data-id="' . $res->id . '">
                                     <i class="tf-icons bx bx-edit-alt"></i>Ubah
@@ -65,14 +65,12 @@ class Categories extends CI_Controller
                 ['required' => '%s tidak boleh kosong.']
             );
 
-            $cat_id    = strip_tags(htmlspecialchars($this->input->post('target', TRUE)));
-            $cat_name  = strip_tags(htmlspecialchars($this->input->post('category', TRUE)));
-            $desc      = strip_tags(htmlspecialchars($this->input->post('desc', TRUE)));
-            $parent_id = strip_tags(htmlspecialchars($this->input->post('parent', TRUE)));
+            $cat_id    = strip_tags(htmlentities($this->input->post('target', TRUE)));
+            $cat_name  = strip_tags(htmlentities($this->input->post('category', TRUE)));
+            $desc      = strip_tags(htmlentities($this->input->post('desc', TRUE)));
+            $parent_id = strip_tags(htmlentities($this->input->post('parent', TRUE)));
 
-            $slug      = preg_replace('/[^\-\sa-zA-Z0-9]+/', '', mb_strtolower($cat_name));
-            $slug      = preg_replace('/[\-\s]+/', '-', $slug);
-            $cat_slug  = preg_replace('/(-(?!.*-)[^\/]*)/', '', $slug);
+            $cat_slug  = url_title($cat_name);
 
             if ($type == "add") {
                 $message = $this->_add_categories($cat_name, $cat_slug, $desc, $parent_id);
@@ -203,7 +201,7 @@ class Categories extends CI_Controller
         if (!$this->input->is_ajax_request()) {
             show_404();
         } else {
-            $target = strip_tags(htmlspecialchars($id));
+            $target = strip_tags(htmlentities($id));
             $result = $this->categories->find(['id' => $target])->row();
             $parent = $this->categories->find(['id' => $result->parent_id])->row();
 

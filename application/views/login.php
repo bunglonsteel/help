@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="<?= base_url() ?>public/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
 
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href="<?= base_url() ?>public/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="<?= base_url() ?>public/assets/vendor/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="<?= base_url() ?>public/assets/vendor/css/pages/page-auth.css" />
     <script src="<?= base_url() ?>public/assets/vendor/js/helpers.js"></script>
     <script src="<?= base_url() ?>public/assets/js/config.js"></script>
@@ -101,10 +101,10 @@
     </div>
     <!-- / Content -->
 
-    <script src="<?= base_url() ?>public/assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="<?= base_url() ?>public/assets/vendor/libs/popper/popper.js"></script>
+    <script src="<?= base_url() ?>public/assets/vendor/jquery/jquery.js"></script>
+    <script src="<?= base_url() ?>public/assets/vendor/popper/popper.js"></script>
     <script src="<?= base_url() ?>public/assets/vendor/js/bootstrap.js"></script>
-    <script src="<?= base_url() ?>public/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="<?= base_url() ?>public/assets/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
 
     <script src="<?= base_url() ?>public/assets/vendor/js/menu.js"></script>
     <!-- Main JS -->
