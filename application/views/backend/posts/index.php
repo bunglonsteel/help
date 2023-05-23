@@ -50,10 +50,10 @@
     </div>
 </div>
 
-<script async src="<?= base_url() ?>public/assets/vendor/js/sweetalert/sweetalert2.js"></script>
-<script src="<?= base_url() ?>public/assets/vendor/js/datatables/datatables.min.js"></script>
+<script async src="<?= base_url() ?>public/assets/vendor/libs/sweetalert/sweetalert2.js"></script>
+<script src="<?= base_url() ?>public/assets/vendor/libs/datatables/datatables.min.js"></script>
 <script>
-    $(function() {
+    $(document).ready(function() {
         const table = $('#table')
 
         table.DataTable({

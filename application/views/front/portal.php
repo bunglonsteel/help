@@ -238,7 +238,7 @@
                     } else {
                         if (!isLoadMore) {
                             wrapListPosts.append(`
-                                        <div class="col-span-2 px-5 py-3 text-center dark:bg-slate-800/50 backdrop-blur border dark:border-slate-800 rounded-xl py-10">
+                                        <div class="col-span-2 px-5 py-10 text-center dark:bg-slate-800/50 backdrop-blur border dark:border-slate-800 rounded-xl">
                                             <span class="text-3xl font-semibold inline-block mb-1 text-slate-600 dark:text-slate-400"> 🥹 </span>
                                             <p class="text-sm">Mohon maaf tidak ada.</p>
                                         </div>

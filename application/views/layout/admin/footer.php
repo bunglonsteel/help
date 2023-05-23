@@ -33,15 +33,12 @@
         </div>
 
         <!-- build -->
-        <script src="<?= base_url() ?>public/assets/vendor/js/popper/popper.js"></script>
+        <script src="<?= base_url() ?>public/assets/vendor/libs/popper/popper.js"></script>
         <script src="<?= base_url() ?>public/assets/vendor/js/bootstrap.js"></script>
-        <script src="<?= base_url() ?>public/assets/vendor/js/perfect-scrollbar/perfect-scrollbar.js"></script>
+        <script src="<?= base_url() ?>public/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
         <script src="<?= base_url() ?>public/assets/vendor/js/menu.js"></script>
         <!-- endbuild -->
-
-        <!-- Vendors JS -->
-        <script src="<?= base_url() ?>public/assets/vendor/js/datatables/datatables.min.js"></script>
 
         <!-- Main JS -->
         <script src="<?= base_url() ?>public/assets/js/main.js"></script>
