@@ -89,6 +89,10 @@ article.notes ol li,
 article.notes ul li{
     @apply mb-2;
 }
+article.notes ol li > ul,
+article.notes ul li > ul{
+    @apply pl-10 pt-5 pb-3;
+}
 
 #list-categories li.active {
   margin-left: 0;
