@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: Inter;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.015rem;
+}
+
+::selection {
+  @apply bg-teal-600 text-gray-50;
+}
+
+.dark #darkModeToggle span:first-child {
+  transform: translateX(100%);
+}
+
+.dark #darkModeToggle span:last-child {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#darkModeToggle span:last-child {
+  transform: translateX(-100%);
+}
+
+.highlight {
+  @apply bg-teal-600 text-white dark:text-slate-400;
+  padding: 0 5px;
+}
+
+/* Article */
+article.notes h1,
+article.notes h2,
+article.notes h3,
+article.notes h4,
+article.notes h5,
+article.notes h6 {
+  @apply font-semibold text-slate-700;
+}
+
+article.notes h1 {
+  @apply mb-3 text-xl tracking-tight dark:text-slate-300 md:text-2xl lg:text-3xl;
+}
+
+article.notes h2 {
+  @apply mb-2 text-lg leading-6 dark:text-slate-300 md:text-xl lg:text-2xl;
+}
+
+article.notes h3 {
+  @apply mb-2 text-base tracking-tight dark:text-slate-300 md:text-lg lg:text-xl;
+}
+
+article.notes h4 {
+  @apply mb-2 text-sm tracking-tight dark:text-slate-300 md:text-base lg:text-lg;
+}
+
+article.notes h5 {
+  @apply mb-2 text-xs tracking-tight dark:text-slate-300 md:text-sm lg:text-base;
+}
+
+article.notes h6 {
+  @apply mb-2 text-xs tracking-tight dark:text-slate-300 md:text-xs lg:text-sm;
+}
+
+article.notes img {
+  @apply my-4 w-full rounded-lg shadow-xl;
+}
+
+article.notes ul li {
+  @apply list-inside list-disc marker:font-bold marker:text-teal-600;
+}
+
+article.notes ol li {
+  @apply list-inside list-decimal marker:font-bold marker:text-teal-600;
+}
+
+#list-categories li.active {
+  margin-left: 0;
+}
+
+#list-categories li.active a {
+  @apply border-l-4 border-teal-600;
+}
+
+#toast-success.active {
+  animation: success_login 1s ease-in 2.5s 1 normal forwards;
+}
+
+@keyframes success_login {
+  from {
+    @apply bottom-8;
+  }
+  to {
+    @apply -bottom-20;
+  }
+}
