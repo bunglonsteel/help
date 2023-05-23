@@ -68,9 +68,9 @@
 </div>
 
 
-<script async src="<?= base_url() ?>public/assets/vendor/libs/sweetalert/sweetalert2.js"></script>
-<script src="<?= base_url() ?>public/assets/vendor/libs/select2/select2.min.js"></script>
-<script src="<?= base_url() ?>public/assets/vendor/libs/summernote/summernote-lite.js"></script>
+<script async src="<?= base_url() ?>public/assets/vendor/sweetalert/sweetalert2.js"></script>
+<script src="<?= base_url() ?>public/assets/vendor/select2/select2.min.js"></script>
+<script src="<?= base_url() ?>public/assets/vendor/summernote/summernote-lite.js"></script>
 
 <script>
     $(function() {

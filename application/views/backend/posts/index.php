@@ -50,8 +50,8 @@
     </div>
 </div>
 
-<script async src="<?= base_url() ?>public/assets/vendor/libs/sweetalert/sweetalert2.js"></script>
-<script src="<?= base_url() ?>public/assets/vendor/libs/datatables/datatables.min.js"></script>
+<script async src="<?= base_url() ?>public/assets/vendor/sweetalert/sweetalert2.js"></script>
+<script src="<?= base_url() ?>public/assets/vendor/datatables/datatables.min.js"></script>
 <script>
     $(document).ready(function() {
         const table = $('#table')

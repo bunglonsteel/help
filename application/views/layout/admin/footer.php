@@ -33,9 +33,9 @@
         </div>
 
         <!-- build -->
-        <script src="<?= base_url() ?>public/assets/vendor/libs/popper/popper.js"></script>
+        <script src="<?= base_url() ?>public/assets/vendor/popper/popper.js"></script>
         <script src="<?= base_url() ?>public/assets/vendor/js/bootstrap.js"></script>
-        <script src="<?= base_url() ?>public/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+        <script src="<?= base_url() ?>public/assets/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
 
         <script src="<?= base_url() ?>public/assets/vendor/js/menu.js"></script>
         <!-- endbuild -->

@@ -21,12 +21,12 @@
 
     <!-- Vendors CSS -->
 
-    <link rel="stylesheet" href="<?= base_url() ?>public/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="<?= base_url() ?>public/assets/vendor/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="<?= base_url() ?>public/assets/vendor/css/pages/page-auth.css" />
-    <link rel="stylesheet" href="<?= base_url() ?>public/assets/vendor/libs/datatables/datatables.min.css" />
-    <link rel="stylesheet" href="<?= base_url() ?>public/assets/vendor/libs/select2/select2.min.css" />
-    <link rel="stylesheet" href="<?= base_url() ?>public/assets/vendor/libs/sweetalert/sweetalert2.css" />
-    <link rel="stylesheet" href="<?= base_url() ?>public/assets/vendor/libs/summernote/summernote-lite.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= base_url() ?>public/assets/vendor/datatables/datatables.min.css" />
+    <link rel="stylesheet" href="<?= base_url() ?>public/assets/vendor/select2/select2.min.css" />
+    <link rel="stylesheet" href="<?= base_url() ?>public/assets/vendor/sweetalert/sweetalert2.css" />
+    <link rel="stylesheet" href="<?= base_url() ?>public/assets/vendor/summernote/summernote-lite.css" rel="stylesheet">
     <script src="<?= base_url() ?>public/assets/vendor/js/helpers.js"></script>
     <script src="<?= base_url() ?>public/assets/js/config.js"></script>
     <style>
@@ -99,7 +99,7 @@
         }
     </style>
     <meta name="<?= $this->security->get_csrf_token_name() ?>" content="<?= $this->security->get_csrf_hash() ?>">
-    <script src="<?= base_url() ?>public/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="<?= base_url() ?>public/assets/vendor/jquery/jquery.js"></script>
 </head>
 
 <body>
