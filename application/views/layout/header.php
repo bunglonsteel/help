@@ -22,7 +22,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url('public/assets/front/style.css') ?>">
     <script src="<?= base_url('public/assets/vendor/libs/jquery/jquery.js') ?>"></script>
-    <script src="<?= base_url('public/assets/vendor/libs/highlight/highlight.js') ?>"></script>
     <meta name="<?= $this->security->get_csrf_token_name() ?>" content="<?= $this->security->get_csrf_hash() ?>">
     <script>
         var csrf = $('meta[name="csrf_token"]')
