@@ -86,7 +86,7 @@
 </div>
 
 <script async src="<?= base_url() ?>public/assets/vendor/js/sweetalert/sweetalert2.js"></script>
-<script src="<?= base_url() ?>public/assets/vendor/js/datatables/dataTables.min.js"></script>
+<script src="<?= base_url() ?>public/assets/vendor/js/datatables/datatables.min.js"></script>
 <script src="<?= base_url() ?>public/assets/vendor/js/select2/select2.min.js"></script>
 
 <script>

@@ -351,9 +351,3 @@
     topPosts();
     categoryLists();
 </script>
-
-<script>
-    $(document).ready(function() {
-        $('.target-select').highlight('veniam');
-    });
-</script>
