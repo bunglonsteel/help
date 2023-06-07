@@ -65,9 +65,9 @@ class Categories extends CI_Controller
                 ['required' => '%s tidak boleh kosong.']
             );
 
-            $cat_id    = strip_tags(htmlentities($this->input->post('target', TRUE)));
-            $cat_name  = strip_tags(htmlentities($this->input->post('category', TRUE)));
-            $desc      = strip_tags(htmlentities($this->input->post('desc', TRUE)));
+            $cat_id    = $this->input->post('target', TRUE);
+            $cat_name  = $this->input->post('category', TRUE);
+            $desc      = $this->input->post('desc', TRUE);
             $parent_id = $this->input->post('parent', TRUE);
 
             $cat_slug  = url_title($cat_name, '-', TRUE);

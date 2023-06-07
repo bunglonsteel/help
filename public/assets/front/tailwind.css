@@ -73,6 +73,18 @@ article.notes h6 {
   @apply mb-2 text-xs tracking-tight dark:text-slate-300 md:text-xs lg:text-sm;
 }
 
+article.notes {
+  word-wrap: break-word;
+}
+
+article.notes a{
+  color: #0d9488;
+}
+
+article.notes a:hover{
+  color: #098076;
+}
+
 article.notes img {
   @apply my-4 w-full rounded-lg shadow-xl;
 }
