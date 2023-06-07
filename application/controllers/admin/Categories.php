@@ -68,9 +68,9 @@ class Categories extends CI_Controller
             $cat_id    = strip_tags(htmlentities($this->input->post('target', TRUE)));
             $cat_name  = strip_tags(htmlentities($this->input->post('category', TRUE)));
             $desc      = strip_tags(htmlentities($this->input->post('desc', TRUE)));
-            $parent_id = strip_tags(htmlentities($this->input->post('parent', TRUE)));
+            $parent_id = $this->input->post('parent', TRUE);
 
-            $cat_slug  = url_title($cat_name);
+            $cat_slug  = url_title($cat_name, '-', TRUE);
 
             if ($type == "add") {
                 $message = $this->_add_categories($cat_name, $cat_slug, $desc, $parent_id);
