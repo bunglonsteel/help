@@ -71,7 +71,7 @@ class Posts extends CI_Controller
         } else {
             $title    = htmlentities($this->input->post('title', TRUE));
 
-            $slug     = url_title(htmlentities($this->input->post('slug', TRUE)));
+            $slug     = url_title(htmlentities($this->input->post('slug', TRUE)), '-', TRUE);
 
             $category = htmlentities($this->input->post('category', TRUE));
             $desc     = htmlentities($this->input->post('desc', TRUE));
@@ -124,7 +124,7 @@ class Posts extends CI_Controller
         } else {
             $title    = htmlentities($this->input->post('title', TRUE));
 
-            $slug     = url_title(htmlentities($this->input->post('slug', TRUE)));
+            $slug     = url_title(htmlentities($this->input->post('slug', TRUE)), '-', TRUE);
 
             $category = htmlentities($this->input->post('category', TRUE));
             $desc     = htmlentities($this->input->post('desc', TRUE));
