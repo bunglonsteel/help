@@ -231,7 +231,7 @@ class Posts extends CI_Controller
             $config['upload_path']      = './public/image/notes/';
             $config['file_ext_tolower'] = TRUE;
             $config['encrypt_name']     = TRUE;
-            $config['max_size']         = '5000';
+            $config['max_size']         = '10000';
 
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('file')) {
