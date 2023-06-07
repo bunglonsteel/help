@@ -2,5 +2,4 @@
 
 CLI
 1. npm install
-2. npx tailwindcss -i ./public/assets/front/tailwind.css -o ./public/assets/front/style.css --watch // Development
-3. npx tailwindcss -o style.css --minify // Production
+2. npx tailwindcss -i ./public/assets/front/tailwind.css -o ./public/assets/front/style.css --watch // Development -- minify // Production
